@@ -1,11 +1,10 @@
 # Gamal Asran - Data Scientist Portfolio
 
-Welcome to my portfolio repository! This repository contains the source code for my personal portfolio website, showcasing my skills, experience, and projects as a Data Scientist.
 
+Welcome to my portfolio repository! This repository contains the source code for my personal portfolio website, showcasing my skills, experience, and projects as a Data Scientist.
 ## Portfolio Link
 
-You can view my portfolio live at: 
-[https://gamalasran.github.io/portfolio/portfolio.html]([https://gamalasran.github.io/portfolio/portfolio.html](https://gamalasraan.github.io/Portfolio/portfolio.html))
+You can view my portfolio live at: [Portfolio](https://gamalasraan.github.io/Portfolio/portfolio.html)
 
 ## About Me
 
