@@ -4,7 +4,8 @@ Welcome to my portfolio repository! This repository contains the source code for
 
 ## Portfolio Link
 
-You can view my portfolio live at: [https://gamalasran.github.io/portfolio]([https://gamalasran.github.io/portfolio](https://gamalasraan.github.io/Portfolio/portfolio.html))
+You can view my portfolio live at: 
+[https://gamalasran.github.io/portfolio/portfolio.html]([https://gamalasran.github.io/portfolio/portfolio.html](https://gamalasraan.github.io/Portfolio/portfolio.html))
 
 ## About Me
 
