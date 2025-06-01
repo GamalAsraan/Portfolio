@@ -4,56 +4,57 @@
 
 ## 🚀 Professional Overview
 
-Data Science specialist with hands-on experience in machine learning pipelines and data-driven solution development. Proven ability to transform complex data into actionable insights through statistical modeling and analytical rigor.
+Computer Science graduate specializing in data science, machine learning, and end-to-end data pipeline development. Experienced in delivering data-driven solutions that optimize business processes and improve decision-making.
 
-## 🔧 Technical Arsenal
+## 🔧 Technical Expertise
 
-| Category        | Technologies & Skills                              |
-|-----------------|----------------------------------------------------|
-| **Languages**   | Python, SQL, C++, Bash                             |
-| **ML Stack**    | Scikit-learn, Pandas, NumPy, Transformers          |
-| **Data Tools**  | Matplotlib, Jupyter, SQL Server, MySQL             |
-| **Practices**   | ETL Processes, Model Deployment, API Integration   |
-| **DevOps**      | Git, Docker, CI/CD Pipelines                       |
+| Category        | Technologies & Skills                                  |
+|-----------------|--------------------------------------------------------|
+| **Languages**   | Python, SQL, C++, JavaScript, Assembly                 |
+| **ML Frameworks** | TensorFlow, Scikit-learn, Hugging Face               |
+| **Data Engineering** | ETL Pipelines, Data Cleaning, Feature Engineering |
+| **Tools & Databases** | MLflow, Git, FastAPI, Docker, MySQL, SQL Server  |
 
 ## 💼 Professional Journey
 
-### Data Science Specialist
-**Digital Egypt Pioneers Initiative** (Oct 2024 - Present)  
-- Engineered data pipelines processing 10k+ social media entries
-- Developed ML models improving prediction accuracy by 15%
-- Optimized SQL queries reducing processing time by 25%
-- Collaborated on AI system prototypes with IBM engineers
+### Data Science Intern
+**Digital Egypt Pioneers Initiative (DEPI) — IBM Collaboration**
+- Developed end-to-end data pipelines using Python (Pandas, NumPy, Scikit-learn) for statistical analysis and predictive modeling
+- Analyzed 10K+ business datasets using Python/SQL, identifying trends that improved customer experience metrics by 15%
+- Automated data preprocessing workflows, accelerating insight generation by 25%
+- Built Bidirectional LSTM sentiment analysis model (85% accuracy) deployed via Docker and FastAPI
 
-### Technical Mentor
-**Be School** (Jun 2023)  
-- Designed curriculum on data manipulation fundamentals
-- Mentored 50+ students in practical analytics techniques
+### Technical Instructor
+**BeSchool — Alexandria, Egypt**
+- Developed comprehensive instructional framework for data structures and algorithms
+- Mentored 50+ students in practical coding exercises and real-world projects
 
-## 🏆 Key Initiatives
+## 🏆 Key Projects
 
-### Social Media Insight Engine
-**Tech Stack:** Python, Pandas, Matplotlib  
-- Analyzed 10k+ social posts using NLP techniques
-- Automated sentiment trend dashboards with 85% accuracy
-- [View on GitHub](https://github.com/GamalAsraan)
+### Twitter Sentiment Analysis System
+**Tech Stack:** Python, TensorFlow
+- Trained LSTM models on 1.6M tweets (Sentiment140 dataset)
+- Achieved 92% multiclass accuracy through contextual word analysis
+- Deployed via Flask API for real-time predictions
 
-### Educational Data Warehouse 
-**Tech Stack:** SQL, Python  
-- Developed ETL pipeline for student performance data
-- Optimized complex joins across 10+ relational tables
+### Task Manager with GUI
+**Tech Stack:** React, Python, SQL
+- Developed cross-platform desktop application using Electron-React
+- Integrated psutil library for system monitoring (CPU/memory)
+- Implemented real-time updates via WebSocket
 
-### Content Analysis Framework
-**Tech Stack:** System Design  
-- Created API specs for third-party service integration
-- Designed data flow diagrams for recommendation systems
+### Educational Management System
+**Tech Stack:** ASP.NET, SQL Server, C#, JavaScript
+- Architected role-based access system with Azure AD integration
+- Optimized SQL queries reducing load times from 8s to 400ms
+- Automated grade calculation and transcript generation
 
 ## 📚 Academic Background
 **BSc Computer Science**  
 _Egypt Japan University of Science & Technology (Expected 2027)_  
 - Relevant Coursework: Data Structures, NLP, Database Systems
 
-## 🌐 Connect With Me
+## 🌐 Let's Connect
 [![Email](https://img.shields.io/badge/Contact-Email-EF4444?style=flat-square)](mailto:gamaalasran@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-0A66C2?style=flat-square)](https://linkedin.com/in/gamal-asran)
 [![GitHub](https://img.shields.io/badge/Code-GitHub-181717?style=flat-square)](https://github.com/GamalAsraan)
@@ -62,9 +63,7 @@ _Egypt Japan University of Science & Technology (Expected 2027)_
 ---
 
 **Key Features:**  
-✅ Machine Learning Lifecycle Management  
-✅ Production-Grade Model Deployment  
-✅ Complex Data Pipeline Architecture  
-✅ Cross-Functional Team Collaboration  
-
-📥 [Download Full CV](https://github.com/GamalAsraan/Portfolio/raw/main/CV.pdf)
+✅ End-to-End Machine Learning & Data Pipelines  
+✅ Production-Grade Model Deployment (Docker, FastAPI)  
+✅ Real-Time Data Processing & Visualization  
+✅ Cross-Functional Team Collaboration
