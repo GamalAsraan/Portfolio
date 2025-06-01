@@ -3,29 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamal Asran - Data Scientist</title>
+    <title>Gamal Asran – Data Scientist</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p1CmYsTIuxbYCu/aPSMr4rUBFQje39+/P+2o7BlmZFx7J5u9vhpMxH3zT8oz00f2+eXK0zLcI5D05L+v0rS+Kg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Hi, I am</h1>
-            <h2>Gamal Asran</h2>
-            <h3>Data Science Specialist</h3>
-            <p>Transforming raw data into actionable insights through advanced analytics</p>
-            <a href="mailto:gamaalasran@gmail.com" class="btn">Contact Me</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I am</h1>
+                <h2>Gamal Asran</h2>
+                <h3>Data Science Specialist</h3>
+                <p>Transforming raw data into actionable insights through advanced analytics and machine learning solutions.</p>
+                <div class="hero-buttons">
+                    <a href="mailto:gamaalasran@gmail.com" class="btn">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                    <a href="#portfolio" class="btn btn-secondary">
+                        <i class="fas fa-laptop-code"></i>
+                        View Portfolio
+                    </a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="img.jpg" alt="Portrait of Gamal Asran">
+            </div>
         </div>
-        <img src="img.jpg" alt="Data Analysis Visualization">
     </section>
 
-    <section class="about-section section">
-        <div>
+    <!-- Professional Profile -->
+    <section class="about-section" id="about">
+        <div class="container">
             <h2>Professional Profile</h2>
             <p>
-                Computer Science graduate with expertise in Python-based analytics, machine learning, 
-                and end-to-end data pipeline development. Proven ability to deliver data-driven solutions 
-                that optimize business processes and improve decision-making.
+                Computer Science graduate with expertise in Python-based analytics, machine learning, and end-to-end data pipeline development.
+                Proven ability to deliver data-driven solutions that optimize business processes and improve decision-making.
             </p>
             <div class="stats">
                 <div class="stat">
@@ -33,7 +54,7 @@
                     <p>Datasets Analyzed</p>
                 </div>
                 <div class="stat">
-                    <h3>85%</h3>
+                    <h3>92%</h3>
                     <p>Model Accuracy</p>
                 </div>
                 <div class="stat">
@@ -44,94 +65,158 @@
         </div>
     </section>
 
-    <section class="section">
-        <h2>Technical Expertise</h2>
-        <div class="skill-grid">
-            <div class="skill-card">
-                <i>💻</i>
-                <h3>Languages</h3>
-                <p>Python, SQL, C++, JavaScript, Assembly</p>
-            </div>
-            <div class="skill-card">
-                <i>🤖</i>
-                <h3>ML Frameworks</h3>
-                <p>TensorFlow, Scikit-learn, Hugging Face</p>
-            </div>
-            <div class="skill-card">
-                <i>🔧</i>
-                <h3>Data Engineering</h3>
-                <p>ETL Pipelines, Data Cleaning, Feature Engineering</p>
-            </div>
-            <div class="skill-card">
-                <i>📦</i>
-                <h3>Tools & Databases</h3>
-                <p>MLflow, Git, FastAPI, Docker, MySQL, SQL Server</p>
+    <!-- Technical Expertise -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Expertise</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Languages</h3>
+                    <p>Python, SQL, C++, JavaScript, Assembly</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>ML Frameworks</h3>
+                    <p>TensorFlow, Scikit-learn, Hugging Face</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Engineering</h3>
+                    <p>ETL Pipelines, Data Cleaning, Feature Engineering</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Tools & Databases</h3>
+                    <p>MLflow, Git, FastAPI, Docker, MySQL, SQL Server</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
-        <h2>Professional Journey</h2>
-        <div class="experience-card">
-            <h3>Data Science Intern</h3>
-            <h4>Digital Egypt Pioneers Initiative (DEPI) — IBM Collaboration</h4>
-            <ul>
-                <li>Developed end-to-end data pipelines using Python (Pandas, NumPy, Scikit-learn) for statistical analysis and predictive modeling</li>
-                <li>Analyzed 10K+ business datasets using Python/SQL, identifying trends that improved customer experience metrics by 15%</li>
-                <li>Automated data preprocessing workflows, accelerating insight generation by 25%</li>
-                <li>Built Bidirectional LSTM sentiment analysis model (85% accuracy) deployed via Docker and FastAPI</li>
-            </ul>
-        </div>
-        <div class="experience-card">
-            <h3>Technical Instructor</h3>
-            <h4>BeSchool — Alexandria, Egypt</h4>
-            <ul>
-                <li>Developed comprehensive instructional framework for data structures and algorithms</li>
-                <li>Mentored 50+ students in practical coding exercises and real-world projects</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Key Projects</h2>
-        <div class="project-card">
-            <h3>Twitter Sentiment Analysis System</h3>
-            <div class="tech-stack">Python, TensorFlow</div>
-            <ul>
-                <li>Trained LSTM models on 1.6M tweets (Sentiment140 dataset)</li>
-                <li>Achieved 92% multiclass accuracy through contextual word analysis</li>
-                <li>Deployed via Flask API for real-time predictions</li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <h3>Task Manager with GUI</h3>
-            <div class="tech-stack">React, Python, SQL</div>
-            <ul>
-                <li>Developed cross-platform desktop application using Electron-React</li>
-                <li>Integrated psutil library for system monitoring (CPU/memory)</li>
-                <li>Implemented real-time updates via WebSocket</li>
-            </ul>
-        </div>
-        <div class="project-card">
-            <h3>Educational Management System</h3>
-            <div class="tech-stack">ASP.NET, SQL Server, C#, JavaScript</div>
-            <ul>
-                <li>Architected role-based access system with Azure AD integration</li>
-                <li>Optimized SQL queries reducing load times from 8s to 400ms</li>
-                <li>Automated grade calculation and transcript generation</li>
-            </ul>
+    <!-- Professional Journey -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Journey</h2>
+            <div class="experience-card">
+                <h3>Data Science Intern</h3>
+                <h4>Digital Egypt Pioneers Initiative (DEPI) — IBM Collaboration</h4>
+                <ul>
+                    <li>Developed end-to-end data pipelines using Python (Pandas, NumPy, Scikit-learn) for statistical analysis and predictive modeling.</li>
+                    <li>Analyzed 10K+ business datasets using Python/SQL, identifying trends that improved customer experience metrics by 15%.</li>
+                    <li>Automated data preprocessing workflows, accelerating insight generation by 25%.</li>
+                    <li>Built Bidirectional LSTM sentiment analysis model (85% accuracy) deployed via Docker and FastAPI.</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h3>Technical Instructor</h3>
+                <h4>BeSchool — Alexandria, Egypt</h4>
+                <ul>
+                    <li>Developed comprehensive instructional framework for data structures and algorithms.</li>
+                    <li>Mentored 50+ students in practical coding exercises and real-world projects.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
+    <!-- Key Projects -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Key Projects</h2>
+            <div class="project-card">
+                <h3>Twitter Sentiment Analysis System</h3>
+                <div class="tech-stack">
+                    <span class="tech-item">Python</span>
+                    <span class="tech-item">TensorFlow</span>
+                    <span class="tech-item">NLP</span>
+                    <span class="tech-item">Flask</span>
+                </div>
+                <ul>
+                    <li>Trained LSTM models on 1.6M tweets (Sentiment140 dataset).</li>
+                    <li>Achieved 92% multiclass accuracy through contextual word analysis.</li>
+                    <li>Deployed via Flask API for real-time predictions.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h3>Task Manager with GUI</h3>
+                <div class="tech-stack">
+                    <span class="tech-item">React</span>
+                    <span class="tech-item">Python</span>
+                    <span class="tech-item">SQL</span>
+                    <span class="tech-item">Electron</span>
+                </div>
+                <ul>
+                    <li>Developed cross-platform desktop application using Electron-React.</li>
+                    <li>Integrated psutil library for system monitoring (CPU/memory).</li>
+                    <li>Implemented real-time updates via WebSocket.</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h3>Educational Management System</h3>
+                <div class="tech-stack">
+                    <span class="tech-item">ASP.NET</span>
+                    <span class="tech-item">SQL Server</span>
+                    <span class="tech-item">C#</span>
+                    <span class="tech-item">JavaScript</span>
+                </div>
+                <ul>
+                    <li>Architected role-based access system with Azure AD integration.</li>
+                    <li>Optimized SQL queries, reducing load times from 8s to 400ms.</li>
+                    <li>Automated grade calculation and transcript generation.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact-section">
-        <h2>Let's Connect</h2>
-        <p>Looking for a data scientist? Let's work together!</p>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/gamal-asran" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/GamalAsraan" target="_blank">GitHub</a> |
-            <a href="https://www.upwork.com/freelancers/~01e0e2a4d2b234f352?viewMode=1" target="_blank">Upwork</a>
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p>Looking for a data scientist? Let's work together!</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/gamal-asran" class="social-link" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/GamalAsraan" class="social-link" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.upwork.com/freelancers/~01e0e2a4d2b234f352?viewMode=1" class="social-link" target="_blank" rel="noopener">
+                    <i class="fab fa-upwork"></i>
+                </a>
+                <a href="mailto:gamaalasran@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <a href="mailto:gamaalasran@gmail.com" class="btn">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+            </a>
         </div>
-        <a href="mailto:gamaalasran@gmail.com" class="btn">Contact Me</a>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Gamal Asran. All rights reserved.</p>
+            <p>Designed with ❤️ and data science.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animation for elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = `fadeIn 0.8s ease-out forwards`;
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.skill-card, .experience-card, .project-card, .stat').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
 </body>
 </html>
