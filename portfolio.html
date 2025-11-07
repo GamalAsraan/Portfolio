@@ -3,216 +3,890 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamal Asran – Data Scientist</title>
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-p1CmYsTIuxbYCu/aPSMr4rUBFQje39+/P+2o7BlmZFx7J5u9vhpMxH3zT8oz00f2+eXK0zLcI5D05L+v0rS+Kg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="portfolio.css">
+    <title>Gamal Asran - Data Scientist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #112240;
+            --accent: #64ffda;
+            --text-primary: #e6f1ff;
+            --text-secondary: #8892b0;
+            --white: #ffffff;
+            --card-bg: #112240;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            background-color: var(--primary);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--white);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--primary);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-greeting {
+            color: var(--accent);
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* About Section */
+        #about {
+            background-color: var(--secondary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            background-color: var(--card-bg);
+            border-radius: 5px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-category {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 5px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-category h3 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background-color: rgba(100, 255, 218, 0.1);
+            color: var(--accent);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Projects Section */
+        #projects {
+            background-color: var(--secondary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 5px;
+            padding: 30px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-links a {
+            font-size: 1.2rem;
+        }
+
+        .project-description {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background-color: rgba(100, 255, 218, 0.1);
+            color: var(--accent);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .project-highlights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-highlights li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .project-highlights li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 30px;
+            width: 2px;
+            background-color: var(--accent);
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 80px;
+        }
+
+        .experience-date {
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 60px;
+            text-align: center;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .experience-content {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 5px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .experience-role {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .experience-company {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .experience-description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-description li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .experience-description li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: var(--secondary);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-item i {
+            margin-right: 15px;
+            color: var(--accent);
+            width: 20px;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+        }
+
+        .contact-form {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 5px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: rgba(10, 25, 47, 0.7);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            border-radius: 4px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background-color: var(--secondary);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">GA</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Hi, I am</h1>
-                <h2>Gamal Asran</h2>
-                <h3>Data Science Specialist</h3>
-                <p>Transforming raw data into actionable insights through advanced analytics and machine learning solutions.</p>
-                <div class="hero-buttons">
-                    <a href="mailto:gamaalasran@gmail.com" class="btn">
-                        <i class="fas fa-envelope"></i>
-                        Contact Me
-                    </a>
-                    <a href="#portfolio" class="btn btn-secondary">
-                        <i class="fas fa-laptop-code"></i>
-                        View Portfolio
-                    </a>
+                <p class="hero-greeting">Hi, my name is</p>
+                <h1 class="hero-title">Gamal Asran.</h1>
+                <h2 class="hero-subtitle">I transform data into insights.</h2>
+                <p class="hero-description">
+                    I'm a data scientist specializing in building machine learning solutions and data pipelines. 
+                    Currently, I'm focused on developing innovative models that solve real-world problems.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn">Get In Touch</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Profile -->
-    <section class="about-section" id="about">
+    <!-- About Section -->
+    <section id="about">
         <div class="container">
-            <h2>Professional Profile</h2>
-            <p>
-                Computer Science graduate with expertise in Python-based analytics, machine learning, and end-to-end data pipeline development.
-                Proven ability to deliver data-driven solutions that optimize business processes and improve decision-making.
-            </p>
-            <div class="stats">
-                <div class="stat">
-                    <h3>10K+</h3>
-                    <p>Datasets Analyzed</p>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Hello! I'm Gamal, a passionate data scientist with a strong foundation in computer science 
+                        and a keen interest in extracting meaningful insights from complex datasets. My journey in 
+                        data science began during my university studies, where I discovered the power of machine 
+                        learning to solve real-world problems.
+                    </p>
+                    <p>
+                        I specialize in building end-to-end machine learning pipelines, from data collection and 
+                        preprocessing to model deployment. I enjoy working on challenging problems and am always 
+                        eager to learn new technologies and methodologies in the rapidly evolving field of data science.
+                    </p>
+                    <p>
+                        When I'm not coding or analyzing data, you can find me participating in competitive programming 
+                        contests, contributing to open-source projects, or mentoring aspiring data scientists.
+                    </p>
                 </div>
-                <div class="stat">
-                    <h3>92%</h3>
-                    <p>Model Accuracy</p>
-                </div>
-                <div class="stat">
-                    <h3>25%</h3>
-                    <p>Process Optimization</p>
+                <div class="about-image">
+
+                    <i class="fas fa-user fa-5x" style="color: var(--accent);"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technical Expertise -->
+    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <h2>Technical Expertise</h2>
-            <div class="skill-grid">
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Languages</h3>
-                    <p>Python, SQL, C++, JavaScript, Assembly</p>
+            <h2>Skills & Technologies</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">R</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-brain"></i>
-                    <h3>ML Frameworks</h3>
-                    <p>TensorFlow, Scikit-learn, Hugging Face</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">TensorFlow</span>
+                        <span class="skill-item">Scikit-learn</span>
+                        <span class="skill-item">Hugging Face</span>
+                        <span class="skill-item">Feature Engineering</span>
+                        <span class="skill-item">Model Evaluation</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Data Engineering</h3>
-                    <p>ETL Pipelines, Data Cleaning, Feature Engineering</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Data Engineering</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">ETL Pipelines</span>
+                        <span class="skill-item">Data Cleaning</span>
+                        <span class="skill-item">SQL Optimization</span>
+                        <span class="skill-item">MLflow</span>
+                        <span class="skill-item">FastAPI</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-tools"></i>
-                    <h3>Tools & Databases</h3>
-                    <p>MLflow, Git, FastAPI, Docker, MySQL, SQL Server</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">SQL Server</span>
+                        <span class="skill-item">Flask</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Journey -->
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Social Media Analysis Engine</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/GamalAsraan" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A production system for analyzing social media data with high classification accuracy, 
+                        combining machine learning with rule-based filtering.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Tweepy</span>
+                        <span class="tech-tag">Naive Bayes</span>
+                    </div>
+                    <div class="project-highlights">
+                        <ul>
+                            <li>Deployed system analyzing 10k+ tweets with 85% classification accuracy</li>
+                            <li>Implemented hybrid ML model combining Naive Bayes with rule-based filtering</li>
+                            <li>Engineered automated validation pipelines for continuous model optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Educational Portal System</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/GamalAsraan" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A secure course management system designed to handle student records with optimized 
+                        database performance and automated reporting.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ASP.NET</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <div class="project-highlights">
+                        <ul>
+                            <li>Developed secure course management system handling 500+ student records</li>
+                            <li>Optimized database queries achieving 25% faster response times</li>
+                            <li>Implemented automated reporting system using Python scripting</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Content Generation Framework</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/GamalAsraan" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A system design framework for content recommendation with API integration specifications 
+                        and data flow diagrams for complex systems.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">System Design</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">Data Flow</span>
+                    </div>
+                    <div class="project-highlights">
+                        <ul>
+                            <li>Created API integration specifications for third-party services</li>
+                            <li>Designed data flow diagrams for complex content recommendation systems</li>
+                            <li>Implemented prompt engineering and NLP modules for text-based tasks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
     <section id="experience">
         <div class="container">
-            <h2>Professional Journey</h2>
-            <div class="experience-card">
-                <h3>Data Science Intern</h3>
-                <h4>Digital Egypt Pioneers Initiative (DEPI) — IBM Collaboration</h4>
-                <ul>
-                    <li>Developed end-to-end data pipelines using Python (Pandas, NumPy, Scikit-learn) for statistical analysis and predictive modeling.</li>
-                    <li>Analyzed 10K+ business datasets using Python/SQL, identifying trends that improved customer experience metrics by 15%.</li>
-                    <li>Automated data preprocessing workflows, accelerating insight generation by 25%.</li>
-                    <li>Built Bidirectional LSTM sentiment analysis model (85% accuracy) deployed via Docker and FastAPI.</li>
-                </ul>
-            </div>
-            <div class="experience-card">
-                <h3>Technical Instructor</h3>
-                <h4>BeSchool — Alexandria, Egypt</h4>
-                <ul>
-                    <li>Developed comprehensive instructional framework for data structures and algorithms.</li>
-                    <li>Mentored 50+ students in practical coding exercises and real-world projects.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Projects -->
-    <section id="portfolio">
-        <div class="container">
-            <h2>Key Projects</h2>
-            <div class="project-card">
-                <h3>Twitter Sentiment Analysis System</h3>
-                <div class="tech-stack">
-                    <span class="tech-item">Python</span>
-                    <span class="tech-item">TensorFlow</span>
-                    <span class="tech-item">NLP</span>
-                    <span class="tech-item">Flask</span>
+            <h2>Work Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date">2025</div>
+                    <div class="experience-content">
+                        <h3 class="experience-role">Machine Learning Intern</h3>
+                        <p class="experience-company">National Telecommunication Institute, Damanhur, Egypt</p>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Assisted in developing and evaluating ML models for communication data analysis</li>
+                                <li>Conducted feature engineering and data preprocessing for predictive insights</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <ul>
-                    <li>Trained LSTM models on 1.6M tweets (Sentiment140 dataset).</li>
-                    <li>Achieved 92% multiclass accuracy through contextual word analysis.</li>
-                    <li>Deployed via Flask API for real-time predictions.</li>
-                </ul>
-            </div>
-            <div class="project-card">
-                <h3>Task Manager with GUI</h3>
-                <div class="tech-stack">
-                    <span class="tech-item">React</span>
-                    <span class="tech-item">Python</span>
-                    <span class="tech-item">SQL</span>
-                    <span class="tech-item">Electron</span>
+                <div class="experience-item">
+                    <div class="experience-date">2024-2025</div>
+                    <div class="experience-content">
+                        <h3 class="experience-role">Data Science Intern</h3>
+                        <p class="experience-company">Digital Egypt Pioneers Initiative (IBM Collaboration), Giza, Egypt</p>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Built data pipelines using Python and SQL to process 10,000+ business records</li>
+                                <li>Developed predictive models using Scikit-learn with hyperparameter optimization</li>
+                                <li>Implemented prompt engineering and NLP modules to automate text-based tasks</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <ul>
-                    <li>Developed cross-platform desktop application using Electron-React.</li>
-                    <li>Integrated psutil library for system monitoring (CPU/memory).</li>
-                    <li>Implemented real-time updates via WebSocket.</li>
-                </ul>
-            </div>
-            <div class="project-card">
-                <h3>Educational Management System</h3>
-                <div class="tech-stack">
-                    <span class="tech-item">ASP.NET</span>
-                    <span class="tech-item">SQL Server</span>
-                    <span class="tech-item">C#</span>
-                    <span class="tech-item">JavaScript</span>
+                <div class="experience-item">
+                    <div class="experience-date">2024-Present</div>
+                    <div class="experience-content">
+                        <h3 class="experience-role">Technical Instructor</h3>
+                        <p class="experience-company">CPC (Competitive Programming Club), Egypt-Japan University</p>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Mentored students in advanced algorithms, code optimization, and contest strategies</li>
+                                <li>Organized workshops and peer-learning sessions to improve student performance</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <ul>
-                    <li>Architected role-based access system with Azure AD integration.</li>
-                    <li>Optimized SQL queries, reducing load times from 8s to 400ms.</li>
-                    <li>Automated grade calculation and transcript generation.</li>
-                </ul>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section">
+    <section id="contact">
         <div class="container">
-            <h2>Let's Connect</h2>
-            <p>Looking for a data scientist? Let's work together!</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/gamal-asran" class="social-link" target="_blank" rel="noopener">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/GamalAsraan" class="social-link" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.upwork.com/freelancers/~01e0e2a4d2b234f352?viewMode=1" class="social-link" target="_blank" rel="noopener">
-                    <i class="fab fa-upwork"></i>
-                </a>
-                <a href="mailto:gamaalasran@gmail.com" class="social-link">
-                    <i class="fas fa-envelope"></i>
-                </a>
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm currently open to new opportunities and collaborations. Whether you have a question 
+                        or just want to say hi, I'll try my best to get back to you!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>gamaalasran@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+20 1114568637</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cairo, Egypt</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/gamal-asran" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/GamalAsraan" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xvojzrqv" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
             </div>
-            <a href="mailto:gamaalasran@gmail.com" class="btn">
-                <i class="fas fa-paper-plane"></i>
-                Send Message
-            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Gamal Asran. All rights reserved.</p>
-            <p>Designed with ❤️ and data science.</p>
+            <p>Designed & Built by Gamal Asran</p>
         </div>
     </footer>
 
     <script>
-        // Simple scroll animation for elements
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animation = `fadeIn 0.8s ease-out forwards`;
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.skill-card, .experience-card, .project-card, .stat').forEach(card => {
-                observer.observe(card);
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
             });
+        });
+        
+        // Form submission
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // In a real implementation, you would send the form data to a server
+            alert('Thank you for your message! I will get back to you soon.');
+            form.reset();
         });
     </script>
 </body>
