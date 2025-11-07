@@ -1,53 +1,70 @@
-# Gamal Asran - Data Science Portfolio
+# Gamal Asran
 
 [![Portfolio Preview](https://img.shields.io/badge/View-Live_Portfolio-EF4444?style=for-the-badge)](https://gamalasraan.github.io/Portfolio/portfolio.html)
 
-## 🚀 Professional Overview
+## � Contact Information
+**Location:** Cairo, Egypt  
+**Phone:** +20 1114568637  
+**Email:** gamaalasran@gmail.com  
+**LinkedIn:** [linkedin.com/in/gamal-asran](https://linkedin.com/in/gamal-asran)  
+**GitHub:** [github.com/GamalAsraan](https://github.com/GamalAsraan)
 
-Computer Science graduate specializing in data science, machine learning, and end-to-end data pipeline development. Experienced in delivering data-driven solutions that optimize business processes and improve decision-making.
+## 🔧 Technical Skills
 
-## 🔧 Technical Expertise
+### Languages & Frameworks
+- **Programming:** Python, SQL, C++, JavaScript, Assembly
+- **ML Frameworks:** TensorFlow, Scikit-learn, Hugging Face
+- **Data Engineering:** ETL Pipelines, Data Cleaning, Feature Engineering
+- **Tools & Databases:** MLflow, Git, FastAPI, Docker, MySQL, SQL Server (Query Optimization)
 
-| Category        | Technologies & Skills                                  |
-|-----------------|--------------------------------------------------------|
-| **Languages**   | Python, SQL, C++, JavaScript, Assembly                 |
-| **ML Frameworks** | TensorFlow, Scikit-learn, Hugging Face               |
-| **Data Engineering** | ETL Pipelines, Data Cleaning, Feature Engineering |
-| **Tools & Databases** | MLflow, Git, FastAPI, Docker, MySQL, SQL Server  |
+### Soft Skills
+Problem-solving, Team-oriented, Communication, Mentorship, Innovation
 
-## 💼 Professional Journey
+## 💼 Professional Experience
+
+### Machine Learning Intern
+**National Telecommunication Institute** | Damanhur, Egypt  
+*Aug 2025 – Sep 2025*
+- Assisted in developing and evaluating ML models for communication data analysis
+- Conducted feature engineering and data preprocessing for predictive insights
 
 ### Data Science Intern
-**Digital Egypt Pioneers Initiative (DEPI) — IBM Collaboration**
-- Developed end-to-end data pipelines using Python (Pandas, NumPy, Scikit-learn) for statistical analysis and predictive modeling
-- Analyzed 10K+ business datasets using Python/SQL, identifying trends that improved customer experience metrics by 15%
-- Automated data preprocessing workflows, accelerating insight generation by 25%
-- Built Bidirectional LSTM sentiment analysis model (85% accuracy) deployed via Docker and FastAPI
+**Digital Egypt Pioneers Initiative (IBM Collaboration)** | Giza, Egypt  
+*Oct 2024 – May 2025*
+- Built data pipelines using Python and SQL to process 10,000+ business records, contributing to models that improved customer satisfaction by 15%
+- Developed predictive models using Scikit-learn, optimizing hyperparameters and cross-validation strategies
+- Implemented prompt engineering and NLP modules to automate text-based tasks, reducing manual workload
 
 ### Technical Instructor
-**BeSchool — Alexandria, Egypt**
-- Developed comprehensive instructional framework for data structures and algorithms
-- Mentored 50+ students in practical coding exercises and real-world projects
+**CPC (Competitive Programming Club)** | Egypt-Japan University  
+*Nov 2024 – Present*
+- Mentored students in advanced algorithms, code optimization, and contest strategies
+- Organized workshops and peer-learning sessions that improved student performance in competitive programming
 
-## 🏆 Key Projects
+## 🚀 Key Projects
 
-### Twitter Sentiment Analysis System
-**Tech Stack:** Python, TensorFlow
-- Trained LSTM models on 1.6M tweets (Sentiment140 dataset)
-- Achieved 92% multiclass accuracy through contextual word analysis
-- Deployed via Flask API for real-time predictions
+### Social Media Analysis Engine
+**Tech Stack:** Python, Flask, Tweepy
+- Deployed production system analyzing 10k+ tweets with 85% classification accuracy
+- Implemented hybrid ML model combining Naive Bayes with rule-based filtering
+- Engineered automated validation pipelines enabling continuous model optimization
 
-### Task Manager with GUI
-**Tech Stack:** React, Python, SQL
-- Developed cross-platform desktop application using Electron-React
-- Integrated psutil library for system monitoring (CPU/memory)
-- Implemented real-time updates via WebSocket
+### Educational Portal System
+**Tech Stack:** ASP.NET, SQL Server, C#
+- Developed secure course management system handling 500+ student records
+- Optimized database queries achieving 25% faster response times
+- Implemented automated reporting system using Python scripting
 
-### Educational Management System
-**Tech Stack:** ASP.NET, SQL Server, C#, JavaScript
-- Architected role-based access system with Azure AD integration
-- Optimized SQL queries reducing load times from 8s to 400ms
-- Automated grade calculation and transcript generation
+### Content Generation Framework
+**Focus:** System Design
+- Created API integration specifications for third-party services
+- Designed data flow diagrams for complex content recommendation systems
+
+## 📚 Education
+
+### Egypt-Japan University of Science and Technology
+**BSc in Computer Science** | Expected 2027  
+GPA: 3.6/4.0
 
 ## 📚 Academic Background
 **BSc Computer Science**  
