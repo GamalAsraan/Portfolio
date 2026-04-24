@@ -1,52 +1,32 @@
-// ==================== Theme Toggle ====================
-        const themeToggle = document.getElementById('themeToggle');
-        const html = document.documentElement;
-        const themeIcon = themeToggle.querySelector('i');
-
-        // Check for saved theme preference or default to dark
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        html.setAttribute('data-theme', currentTheme);
-        updateThemeIcon(currentTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const theme = html.getAttribute('data-theme');
-            const newTheme = theme === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
-
-        function updateThemeIcon(theme) {
-            themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-        }
-
         // ==================== Mobile Menu ====================
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const navLinks = document.getElementById('navLinks');
-        const menuIcon = mobileMenuToggle.querySelector('i');
+        const menuIcon = mobileMenuToggle ? mobileMenuToggle.querySelector('i') : null;
 
-        mobileMenuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            menuIcon.className = navLinks.classList.contains('active') 
-                ? 'fas fa-times' 
-                : 'fas fa-bars';
-        });
-
-        // Close mobile menu when clicking a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                menuIcon.className = 'fas fa-bars';
+        if (mobileMenuToggle && navLinks && menuIcon) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuIcon.className = navLinks.classList.contains('active')
+                    ? 'fas fa-times'
+                    : 'fas fa-bars';
             });
-        });
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-                navLinks.classList.remove('active');
-                menuIcon.className = 'fas fa-bars';
-            }
-        });
+            // Close mobile menu when clicking a link
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuIcon.className = 'fas fa-bars';
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    menuIcon.className = 'fas fa-bars';
+                }
+            });
+        }
 
         // ==================== Navbar Scroll Effect ====================
         const navbar = document.getElementById('navbar');
@@ -289,7 +269,7 @@
         */
 
         // ==================== Console Message ====================
-        console.log('%c👋 Hi there!', 'font-size: 20px; font-weight: bold; color: #0ea5e9;');
-        console.log('%cInterested in the code? Check out the repository!', 'font-size: 14px; color: #64748b;');
-        console.log('%c🚀 Built with vanilla JavaScript - No frameworks needed!', 'font-size: 14px; color: #10b981;');
+        console.log('%c👋 Hi there!', 'font-size: 20px; font-weight: bold; color: #f54e00;');
+        console.log('%cInterested in the code? Check out the repository!', 'font-size: 14px; color: #5a584d;');
+        console.log('%c🚀 Built with vanilla JavaScript - No frameworks needed!', 'font-size: 14px; color: #1f8a65;');
     
