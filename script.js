@@ -1,4 +1,5 @@
-// ==================== Theme Toggle ====================
+
+        // ==================== Theme Toggle ====================
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
         const themeIcon = themeToggle.querySelector('i');
@@ -8,16 +9,20 @@
         html.setAttribute('data-theme', currentTheme);
         updateThemeIcon(currentTheme);
 
-        themeToggle.addEventListener('click', () => {
-            const theme = html.getAttribute('data-theme');
-            const newTheme = theme === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const theme = html.getAttribute('data-theme');
+                const newTheme = theme === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+        }
 
         function updateThemeIcon(theme) {
-            themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            if (themeIcon) {
+                themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            }
         }
 
         // ==================== Mobile Menu ====================
@@ -233,16 +238,16 @@
         setTimeout(typeRole, 1000);
 
         // ==================== Counter Animation ====================
-        function animateCounter(element, target) {
+        function animateCounter(element, target, suffix) {
             let current = 0;
             const increment = target / 100;
             const timer = setInterval(() => {
                 current += increment;
                 if (current >= target) {
-                    element.textContent = target + (element.textContent.includes('%') ? '%' : element.textContent.includes('+') ? '+' : '');
+                    element.textContent = target + suffix;
                     clearInterval(timer);
                 } else {
-                    element.textContent = Math.floor(current) + (element.textContent.includes('%') ? '%' : element.textContent.includes('+') ? '+' : '');
+                    element.textContent = Math.floor(current) + suffix;
                 }
             }, 20);
         }
@@ -252,10 +257,13 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const statValue = entry.target.querySelector('h3');
-                    const value = parseInt(statValue.textContent);
+                    const text = statValue.textContent;
+                    const value = parseInt(text);
+                    const suffix = text.replace(/[0-9.]/g, '');
+                    
                     if (!isNaN(value)) {
                         statValue.textContent = '0';
-                        animateCounter(statValue, value);
+                        animateCounter(statValue, value, suffix);
                     }
                     statsObserver.unobserve(entry.target);
                 }

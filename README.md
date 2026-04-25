@@ -1,6 +1,6 @@
 # Gamal Asran
 
-[![Portfolio Preview](https://img.shields.io/badge/View-Live_Portfolio-EF4444?style=for-the-badge)](https://gamalasraan.github.io/Portfolio/portfolio.html)
+[![Portfolio Preview](https://img.shields.io/badge/View-Live_Portfolio-EF4444?style=for-the-badge)](https://gamalasraan.github.io/Portfolio/)
 
 ## � Contact Information
 **Location:** Cairo, Egypt  
